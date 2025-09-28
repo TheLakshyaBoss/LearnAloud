@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LearnAloud</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>LearnAloud</h1>
+    <p class="subtitle">Your study buddy for visually impaired learners</p>
+
+    <div class="upload-box">
+      <label for="imageInput" class="upload-label">📂 Upload an Image</label>
+      <input type="file" id="imageInput" accept="image/*">
+    </div>
+
+    <div id="preview" class="preview"></div>
+
+    <button id="extractBtn" disabled>Extract Text</button>
+
+    <div id="outputContainer" class="output hidden">
+        <h2>Extracted Text</h2>
+        <textarea id="outputText" readonly></textarea>
+
+        <div class="voice-selector">
+            <label for="voiceSelect">Select Voice:</label>
+            <select id="voiceSelect"></select>
+        </div>
+
+
+        <div class="controls">
+            <button id="playBtn">▶ Play</button>
+            <button id="pauseBtn">⏸ Pause</button>
+            <button id="stopBtn">⏹ Stop</button>
+        </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
